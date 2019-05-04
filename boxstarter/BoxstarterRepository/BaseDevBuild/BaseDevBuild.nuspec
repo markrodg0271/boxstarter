@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>BaseDevBuild</id>
+    <version>1.0.3</version>
+    <authors>Mark Rodgers</authors>
+    <owners>Mark Rodgers</owners>
+    <description>This package creates a base build for a developer.</description>
+    <tags>Boxstarter</tags>
+  </metadata>
+</package>
