@@ -189,6 +189,7 @@
 	cinst dropbox -y
 	cinst openssl.light -y
 	cinst bginfo -y
+	cinst postman -y
 	#install_azuremanagementstudio
 	#install_servicebusexplorer
 	#install_wowza
@@ -221,6 +222,7 @@
 	Install-ChocolateyPinnedTaskBarItem "$env:ProgramFiles\ConEmu\ConEmu64.exe"
 	Install-ChocolateyPinnedTaskBarItem "${env:ProgramFiles(x86)}\Atlassian\SourceTree\SourceTree.exe"
 	Install-ChocolateyPinnedTaskBarItem "${env:ProgramFiles(x86)}\code4ward.net\Royal TS V4\RoyalTS.exe"
+	Install-ChocolateyPinnedTaskBarItem "$env:ProgramFiles\Microsoft VS Code\Code.exe"
 	#Install-ChocolateyPinnedTaskBarItem "${env:ProgramFiles(x86)}\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\ssms.exe"
 	#Install-ChocolateyPinnedTaskBarItem "$env:ProgramFiles\NUnit-2.6.4\bin\nunit.exe"
 	
