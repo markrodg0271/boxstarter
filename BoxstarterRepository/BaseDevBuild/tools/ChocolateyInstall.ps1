@@ -190,6 +190,8 @@
 	cinst openssl.light -y
 	cinst bginfo -y
 	cinst postman -y
+	cinst python
+	pip install sfctl
 	#install_azuremanagementstudio
 	#install_servicebusexplorer
 	#install_wowza
@@ -226,6 +228,8 @@
 	#Install-ChocolateyPinnedTaskBarItem "${env:ProgramFiles(x86)}\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\ssms.exe"
 	#Install-ChocolateyPinnedTaskBarItem "$env:ProgramFiles\NUnit-2.6.4\bin\nunit.exe"
 	
+	Install-Module AzureAD -force
+
 	# Update Windows and reboot if necessary
 	Install-WindowsUpdate -AcceptEula
 	if (Test-PendingReboot) { Invoke-Reboot }
