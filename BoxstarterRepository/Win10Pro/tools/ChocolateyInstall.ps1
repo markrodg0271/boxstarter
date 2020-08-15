@@ -31,15 +31,16 @@
 	cinst beyondcompare -y
 	cinst dropbox -y
 	cinst openssl.light -y
+	cinst steam -y
 
 	# install Windows features
 	cinst TelnetClient -source windowsfeatures -y
-	cinst IIS-WebSockets -source windowsfeatures -y
 	if (Test-PendingReboot) { Invoke-Reboot }
 
 	Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions
 
 	#taskbar items
+	Install-ChocolateyPinnedTaskBarItem "${env:ProgramFiles(x86)}\Google\Chrome\Application\chrome.exe"
 	# Install-ChocolateyPinnedTaskBarItem "${env:ProgramFiles(x86)}\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe"
 	# Install-ChocolateyPinnedTaskBarItem "$env:ProgramFiles\ConEmu\ConEmu64.exe"
 	# Install-ChocolateyPinnedTaskBarItem "${env:ProgramFiles(x86)}\Atlassian\SourceTree\SourceTree.exe"
