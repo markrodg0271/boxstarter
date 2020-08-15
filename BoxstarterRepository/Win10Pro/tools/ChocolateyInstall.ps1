@@ -28,8 +28,9 @@
 	cinst git-credential-winstore -y
 	cinst fiddler -y
 	cinst curl -y
-	cinst azurepowershell -y
+	# cinst azurepowershell -y
 	cinst azure-cli -y
+	cinst az.powershell -y
 	cinst azcopy -y
 	cinst powershell-core -y
 	cinst microsoftazurestorageexplorer -y
@@ -37,7 +38,7 @@
 	cinst vscode -y
 	cinst vscode-powershell -y
 	cinst vscode-icons -y
-	cinst install royalts-v5 -y
+	cinst royalts-v5 -y
 	cinst beyondcompare -y
 	cinst dropbox -y
 	cinst openssl.light -y
