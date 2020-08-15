@@ -44,8 +44,8 @@
 	Install-ChocolateyPinnedTaskBarItem "${env:ProgramFiles}\Microsoft VS Code\Code.exe"
 	Install-ChocolateyPinnedTaskBarItem "${env:ProgramFiles(x86)}\code4ward.net\Royal TS V4\RoyalTS.exe"
 	
-	Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
-	Install-Module AzureAD -force
+	# Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
+	# Install-Module AzureAD -force
 
 	# Update Windows and reboot if necessary
 	Install-WindowsUpdate -AcceptEula
