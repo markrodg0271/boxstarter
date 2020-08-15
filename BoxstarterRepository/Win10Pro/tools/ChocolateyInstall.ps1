@@ -9,6 +9,16 @@
 	Disable-InternetExplorerESC
 	Disable-UAC
 	
+	Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions
+
+	Set-StartScreenOptions -EnableListDesktopAppsFirst
+
+	Set-StartScreenOptions -EnableBootToDesktop -EnableDesktopBackgroundOnStart -EnableShowStartOnActiveScreen -EnableShowAppsViewOnStartScreen -EnableSearchEverywhereInAppsView -EnableListDesktopAppsFirst
+
+	# Disables the Bing Internet Search when searching from the search field in the Taskbar or Start Menu.
+	Disable-BingSearch
+	Disable-GameBarTips
+
 	# remember to make it rerunnable since this script will execute multiple times
 	if (Test-PendingReboot) { Invoke-Reboot }
 
@@ -37,13 +47,11 @@
 	cinst TelnetClient -source windowsfeatures -y
 	if (Test-PendingReboot) { Invoke-Reboot }
 
-	Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions
-
 	#taskbar items
 	Install-ChocolateyPinnedTaskBarItem "${env:ProgramFiles(x86)}\Google\Chrome\Application\chrome.exe"
 	Install-ChocolateyPinnedTaskBarItem "${env:ProgramFiles}\Microsoft VS Code\Code.exe"
-	Install-ChocolateyPinnedTaskBarItem "${env:ProgramFiles(x86)}\code4ward.net\Royal TS V4\RoyalTS.exe"
-	
+	Install-ChocolateyPinnedTaskBarItem "${env:ProgramFiles(x86)}\Royal TS V5\RoyalTS.exe"
+
 	# Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
 	# Install-Module AzureAD -force
 
