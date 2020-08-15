@@ -69,6 +69,7 @@ cinst beyondcompare -y
 cinst dropbox -y
 cinst openssl.light -y
 cinst steam -y
+cinst 1password -y
 
 # install Windows features
 cinst TelnetClient -source windowsfeatures -y
