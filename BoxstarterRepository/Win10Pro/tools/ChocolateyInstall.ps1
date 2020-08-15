@@ -72,12 +72,12 @@ cinst steam -y
 cinst 1password -y
 
 # install Windows features
-cinst TelnetClient -source windowsfeatures -y
+Install-WindowsFeature -name Telnet-Client
 if (Test-PendingReboot) { Invoke-Reboot }
 
 #taskbar items
 Install-ChocolateyPinnedTaskBarItem "$($Boxstarter.programFiles86)\Google\Chrome\Application\chrome.exe"
-Install-ChocolateyPinnedTaskBarItem "$($Boxstarter.programFiles)\Microsoft VS Code\Code.exe"
+Install-ChocolateyPinnedTaskBarItem "$env:ProgramFiles\Microsoft VS Code\Code.exe"
 Install-ChocolateyPinnedTaskBarItem "$($Boxstarter.programFiles86)\Royal TS V5\RoyalTS.exe"
 
 # Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
