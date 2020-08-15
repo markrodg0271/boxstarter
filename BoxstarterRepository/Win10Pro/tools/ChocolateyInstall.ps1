@@ -27,7 +27,7 @@
 	cinst vscode -y
 	cinst vscode-powershell -y
 	cinst vscode-icons -y
-	cinst royalts -y
+	cinst install royalts-v5 -y
 	cinst beyondcompare -y
 	cinst dropbox -y
 	cinst openssl.light -y
