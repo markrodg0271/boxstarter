@@ -72,9 +72,9 @@ cinst steam -y
 cinst 1password -y
 
 # install Windows features
-Install-WindowsFeature -name Telnet-Client
+cinst TelnetClient -source windowsfeatures
 if (Test-PendingReboot) { Invoke-Reboot }
-
+s
 #taskbar items
 Install-ChocolateyPinnedTaskBarItem "$($Boxstarter.programFiles86)\Google\Chrome\Application\chrome.exe"
 Install-ChocolateyPinnedTaskBarItem "$env:ProgramFiles\Microsoft VS Code\Code.exe"
