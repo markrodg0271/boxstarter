@@ -9,12 +9,12 @@
 $boxStarterScriptLocation = "https://raw.githubusercontent.com/markrodg0271/boxstarter/master/BoxstarterRepository/Win10Pro/tools/ChocolateyInstall.ps1"
 
 #Set Internet Explorer to allow boxstarter.org without interrupting
-Set-Location "HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\EscDomains"
-if (!(Test-Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\EscDomains\boxstarter.org"))
-{
-	New-Item boxstarter.org -Force
-	New-ItemProperty "HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\EscDomains\boxstarter.org" -Name http -Value 2 -Type DWORD -Force
-}
+# Set-Location "HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\EscDomains"
+# if (!(Test-Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\EscDomains\boxstarter.org"))
+# {
+# 	New-Item boxstarter.org -Force
+# 	New-ItemProperty "HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\EscDomains\boxstarter.org" -Name http -Value 2 -Type DWORD -Force
+# }
 
 #Kick off Boxstarter
 START http://boxstarter.org/package/url?$boxStarterScriptLocation
